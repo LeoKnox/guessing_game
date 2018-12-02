@@ -15,8 +15,6 @@ def guessing_game():
 @app.route('/again', methods=['POST'])
 def try_again():
     if int(request.form['answer']) == session['mynum']:
-        session['judge']='Correct'
-        session['lohi']=''
         session.clear();
     else:
         session['judge']='WronG!'
